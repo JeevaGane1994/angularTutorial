@@ -22,12 +22,6 @@ div{
   
   }
   
-  input:focus{
-  background-color:#6495ED;
-  
-  
-  }
-  
   button {
     background-color:#00BFFF;
      border-radius: 25px;
