@@ -1,18 +1,35 @@
-
 <div class="relative ">
-    <h1>Sign up</h1>
-    <p><label for="first name">First name:</label>
-    <input class="height" style="margin-left:45px"type="text" placeholder="first name"  size="35"  > </p>
-    <p><label for="last name">Last name:</label>
-    <input class="height"style="margin-left:47px" type="text" placeholder="last name" size="35"></p>
-    <p><label for="User name">User name:</label>
-    <input class="height" style="margin-left:45px" type="text" placeholder="User name" size="35" ></p>
-    <p><label for="Email id">Email id:</label>
-    <input class="height" style="margin-left:55px" type="text" placeholder="Email id" size="35" ></p>
-    <p><label for="Password">Password:</label>
-    <input class="height" style="margin-left:53px" type="Password" placeholder="Password" size="35" >
-    </p>
-    <hr>
-    <button> create</button>
-    
-    </div> 
+    <form #signUp="ngForm" (ngSubmit)="displayData(signUp.value)">
+        <h1>Sign up</h1>
+        <div class='formFields'>
+            <div class='fields'>
+                <label for="first name">First name:</label>
+                <input class="height" style="margin-left:45px" type="text" placeholder="first name" size="35"
+                    name="firstName" ngModel>
+            </div>
+            <div class='fields'>
+                <label for="last name">Last name:</label>
+                <input class="height" style="margin-left:47px" type="text" placeholder="last name" size="35"
+                    name="lastName" ngModel>
+            </div>
+            <div class='fields'>
+                <label for="User name">User name:</label>
+                <input class="height" style="margin-left:45px" type="text" placeholder="User name" size="35"
+                    name="userName" ngModel>
+            </div>
+            <div class='fields'>
+                <label for="Email id">Email id:</label>
+                <input class="height" style="margin-left:55px" type="text" placeholder="Email id" size="35" name="email"
+                    ngModel>
+            </div>
+            <div class='fields'>
+                <label for="Password">Password:</label>
+                <input class="height" style="margin-left:53px" type="Password" placeholder="Password" size="35"
+                    name="pwd" ngModel>
+            </div>
+
+            <hr>
+            <input class='submit' type="submit" value="submit">
+        </div>
+    </form>
+</div>

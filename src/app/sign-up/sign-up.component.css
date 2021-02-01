@@ -1,4 +1,4 @@
-div{
+.relative{
   width: 500px;
   border-radius: 10px;
   border: solid black;
@@ -19,15 +19,9 @@ div{
   color: white;
   text-align:center;
   text-decoration: underline;
-  
-  }
-  
-  input:focus{
-  background-color:#6495ED;
-  
-  
-  }
-  
+  margin: 0;
+}
+   
   button {
     background-color:#00BFFF;
      border-radius: 25px;
@@ -53,3 +47,20 @@ div{
     padding-bottom: 6px;
     }
   
+    .fields{
+      margin-bottom:25px;
+    }
+
+    .submit{
+      padding: 5px 45px;
+    background: green;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 16px;
+    margin: 12px;
+    border: 1px solid;
+    }
+
+    .formFields{
+      margin-top: 20px;
+    }
