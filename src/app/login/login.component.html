@@ -2,28 +2,26 @@
   <h1 style="text-align:center">amazon.in</h1>
 </div>
 <div class="login">
+  <form [formGroup]="loginForm">
+    <h2 class="margin">Login</h2>
+    <h5 class="margin"> <label for="email or mobile phone number">email or mobile phone number</label> <br>
 
-  <h2 class="margin">Login</h2>
-  <h5 class="margin"> <label for="email or mobile phone number">email or mobile phone number</label> <br>
+      <input class="height" type="text" size="40" formControlName="email">
+    </h5>
+    <h5 class="margin">
+      <label for="password">password</label><br>
 
-    <input class="height" type="text" size="40">
-  </h5>
-  <h5 class="margin">
-    <label for="password">password</label><br>
-
-    <input class="height" type="password" placehoder="password" size="40">
-  </h5>
-
-  <div class="margin">
-    <button class="button1">Log in</button>
-  </div>
+      <input class="height" formControlName="pwd" type="password" placehoder="password" size="40">
+    </h5>
+  </form>
+  <button class="button1" (click)='onLogin()'>Log in</button>
   <p class="margin"> By continuing You agree to Amazon's <a href="facebook_ads_example" target="_blank"> Condition's of
       use </a> and <a href="facebook_ads_example" target="_blank"> privecy notice</a> </p>
   <br>
   <p class="margin"> <a href="facebook_ads_example" target="_blank"> need help? </a></p>
 
 </div>
-<div style="text-align:center" ?>
+<div style="text-align:center">
   <p>New to amazon
   <p>
 </div>
