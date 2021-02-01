@@ -6,8 +6,10 @@
     <h2 class="margin">Login</h2>
     <h5 class="margin"> <label for="email or mobile phone number">email or mobile phone number</label> <br>
 
-      <input class="height" type="text" size="40" formControlName="email">
+      <input class="height" type="text" size="40" required formControlName="email">
     </h5>
+<span *ngIf='this.loginForm.invalid' class='error'>Error in email</span>
+
     <h5 class="margin">
       <label for="password">password</label><br>
 
@@ -21,8 +23,12 @@
   <p class="margin"> <a href="facebook_ads_example" target="_blank"> need help? </a></p>
 
 </div>
+
+
+
+
 <div style="text-align:center">
-  <p>New to amazon
+  <p>New to amazon.
   <p>
 </div>
 <div>

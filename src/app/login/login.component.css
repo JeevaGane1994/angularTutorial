@@ -58,3 +58,7 @@ body{
   margin-left:430px;
   padding:5px 120px 5px 120px;
   }
+
+  .error{
+    color:red;
+  }

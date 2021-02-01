@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -14,15 +14,18 @@ export class LoginComponent  implements OnInit {
 
   ngOnInit(): void {
     this.loginForm = new FormGroup({
-      email: new FormControl(""),
+      email: new FormControl("", Validators.compose([
+        Validators.required,
+        Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")
+     ])),
       pwd: new FormControl("")
     });
 
   }
  
   onLogin() {
-    const data = this.loginForm.value
-    console.log(data);
+    const result = this.loginForm.invalid; // valid, invalid, dirty, prstine, touchec, untoched
+    console.log(result);
   }
 
 }
