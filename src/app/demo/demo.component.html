@@ -4,3 +4,19 @@
  
 <span>Answer {{total}} </span>
 
+
+<!--ngFor-->
+
+<ul>
+    <li *ngFor='let element of names'>{{element}}</li>
+</ul>
+
+
+
+
+
+<!--ngIf-->
+
+<h1 *ngIf='displayName'>name: Student Name </h1>
+<button *ngIf='!displayName' (click)='toggleName()'> Show </button>
+<button *ngIf='displayName' (click)='togglename()'> Hide </button>

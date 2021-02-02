@@ -5,17 +5,21 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './demo.component.html',
   styleUrls: ['./demo.component.css']
 })
-export class DemoComponent implements OnInit {
+export class DemoComponent  {
   total = 0;
 
   //USE CAN USE IN HTML BY USING {{}},
   //U CAN USE EVERYWHERE IN COMPONENT USING this.
   //IF U CHANGE THE GLOBAL VALUE IN TS THEN IT WILL IMMEDIATELY REFLECT IN HTML
-
+  displayName = false;
+  names = ['jeeva', 'akil', 'mahesh', 'raghav'];
 
   constructor() { }
+ 
 
-  ngOnInit(): void {}
+  toggleName(){
+    this.displayName = !this.displayName;
+  }
 
 
   //NO NEED OF FUNCTION KEYWORD
