@@ -10,6 +10,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { DemoComponent } from './demo/demo.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,17 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule.forRoot([
+      {
+         path: 'login',
+         component: LoginComponent
+      },
+      {
+        path:'signUp',
+        component: SignUpComponent
+      }
+   ])
   ],
   providers: [],
   bootstrap: [AppComponent]
