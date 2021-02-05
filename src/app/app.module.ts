@@ -32,7 +32,7 @@ import { RouterModule} from '@angular/router';
          component: LoginComponent
       },
       {
-        path:'signUp',
+        path:'signup',
         component: SignUpComponent
       }
    ])
