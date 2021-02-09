@@ -29,6 +29,14 @@ import { RouterModule} from '@angular/router';
     RouterModule.forRoot([
       {path: 'login',component: LoginComponent},
       {path:'signup',component: SignUpComponent},
+      {path: 'angular', component: DashboardComponent,
+        children: [  
+          {
+            path: 'dashboard',
+            loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)    
+          },
+        ]
+      },
       { path: '',   redirectTo: '/login', pathMatch: 'full' },
       { path: '**',   component: DemoComponent }, 
    ])
