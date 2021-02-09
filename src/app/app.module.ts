@@ -27,14 +27,10 @@ import { RouterModule} from '@angular/router';
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      {
-         path: 'login',
-         component: LoginComponent
-      },
-      {
-        path:'signup',
-        component: SignUpComponent
-      }
+      {path: 'login',component: LoginComponent},
+      {path:'signup',component: SignUpComponent},
+      { path: '',   redirectTo: '/login', pathMatch: 'full' },
+      { path: '**',   component: DemoComponent }, 
    ])
   ],
   providers: [],
