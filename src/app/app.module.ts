@@ -29,11 +29,15 @@ import { RouterModule} from '@angular/router';
     RouterModule.forRoot([
       {path: 'login',component: LoginComponent},
       {path:'signup',component: SignUpComponent},
-      {path: 'angular', component: DashboardComponent,
+      {path: 'pages', component: DashboardComponent,
         children: [  
           {
             path: 'dashboard',
             loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)    
+          },
+          {
+            path: 'book',
+            loadChildren: () => import('./booking/booking.module').then(m => m.BookingModule)    
           },
         ]
       },
@@ -45,3 +49,5 @@ import { RouterModule} from '@angular/router';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+ 

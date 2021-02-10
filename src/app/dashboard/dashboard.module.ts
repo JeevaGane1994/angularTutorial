@@ -11,7 +11,7 @@ import { CardsComponent } from './cards/cards.component';
   imports: [
     CommonModule,
     RouterModule.forChild([
-      {path: 'search',component: SearchComponent},
+      {path: '',component: SearchComponent},
       {path: 'cards',component: CardsComponent}
 
    ])
