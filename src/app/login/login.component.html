@@ -6,7 +6,7 @@
     <h2 class="margin">Login</h2>
     <h5 class="margin"> <label for="email or mobile phone number">email or mobile phone number</label> <br>
 
-      <input class="height" type="text" size="40" required formControlName="email">
+      <input class="height" type="text" size="40" required formControlName="emailid">
     </h5>
 <span *ngIf='this.loginForm.invalid' class='error'>Error in email</span>
 
@@ -32,7 +32,7 @@
   <p>
 </div>
 <div>
-  <button class="button2">create new amazon account</button>
+  <button class="button2" (click)='navigateToSignup()'>create new amazon account</button>
   <!-- <a [routerLink] = "/signup">New component</a> -->
 </div>
 
