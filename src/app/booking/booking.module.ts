@@ -10,7 +10,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatRippleModule } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
-
+import { MatButtonModule } from '@angular/material/button';
+import {MatDividerModule} from '@angular/material/divider';
 
 
 @NgModule({
@@ -20,9 +21,11 @@ import { MatInputModule } from '@angular/material/input';
     CommonModule,
     FormsModule,
     MatIconModule,
+    MatDividerModule,
     MatFormFieldModule,
     ReactiveFormsModule,
     MatInputModule,
+    MatButtonModule,
     MatRippleModule,
     NgxStarRatingModule, 
     RouterModule.forChild([
