@@ -3,3 +3,30 @@
     <div>Rating: {{form.value.rating}}</div>
     <p>form is valid: {{ form.valid ? 'true' : 'false' }}</p>
 </form>
+
+
+
+<input [ngxMatTimepicker]="picker">
+<ngx-mat-timepicker #picker></ngx-mat-timepicker>
+
+
+
+
+
+<mat-form-field>
+    <input matInput
+           name="selected_time_B"
+           format="24"
+           [(ngModel)]="selectedTime"
+           [ngxMatTimepicker]="pickerB"
+           placeholder="16:00"
+           readonly />
+    <mat-icon matSuffix
+              (click)="pickerB.open()">
+        watch_later
+    </mat-icon>
+</mat-form-field>
+<ngx-mat-timepicker color="accent"
+                    #pickerB></ngx-mat-timepicker>
+                
+ 

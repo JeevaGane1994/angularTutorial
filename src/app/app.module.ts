@@ -11,6 +11,7 @@ import { DemoComponent } from './demo/demo.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule} from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { RouterModule} from '@angular/router';
       },
       { path: '',   redirectTo: '/login', pathMatch: 'full' },
       { path: '**',   component: DemoComponent }, 
-   ])
+   ]),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

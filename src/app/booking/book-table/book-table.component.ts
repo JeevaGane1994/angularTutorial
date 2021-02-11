@@ -10,6 +10,7 @@ export class BookTableComponent implements OnInit {
 
   public form: FormGroup;
   rating3;
+  selectedTime;
   
   constructor(private fb: FormBuilder){
     this.rating3 = 0;
