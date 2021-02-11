@@ -17,7 +17,6 @@ import { RouterModule} from '@angular/router';
     AppComponent,
     LoginComponent,
     HomeComponent,
-    DashboardComponent,
     SignUpComponent,
     DemoComponent
   ],
@@ -29,7 +28,7 @@ import { RouterModule} from '@angular/router';
     RouterModule.forRoot([
       {path: 'login',component: LoginComponent},
       {path:'signup',component: SignUpComponent},
-      {path: 'pages', component: DashboardComponent,
+      {path: 'pages',
         children: [  
           {
             path: 'dashboard',
