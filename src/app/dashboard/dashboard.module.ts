@@ -18,6 +18,6 @@ import { AppRoutingModule } from '../app-routing.module';
 
    ])
   ],
-  bootstrap:[DashboardComponent]
+  bootstrap:[]
 })
 export class DashboardModule { }

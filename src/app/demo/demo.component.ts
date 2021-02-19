@@ -1,53 +1,46 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, DoCheck, OnInit } from '@angular/core';
+import { StudentsService } from '../students.service';
 
 @Component({
   selector: 'app-demo',
   templateUrl: './demo.component.html',
   styleUrls: ['./demo.component.css']
 })
-export class DemoComponent  {
-  total = 0;
-  employeeName = 'mahesh';
-  //USE CAN USE IN HTML BY USING {{}},
-  //U CAN USE EVERYWHERE IN COMPONENT USING this.
-  //IF U CHANGE THE GLOBAL VALUE IN TS THEN IT WILL IMMEDIATELY REFLECT IN HTML
-  displayName = false;
-  names = ['jeeva', 'akil', 'mahesh', 'raghav'];
+export class DemoComponent implements OnInit, DoCheck {
 
-  todaysDate = 454.787878565656565614 ;
+  value = 1;
+  multplier = 1;
+  answerfromOne = 0
+
   
-  constructor() {
 
+  constructor(private sservice:StudentsService) { }
 
-    console.log(this.todaysDate)
-   }
- 
+  ngOnInit() {
 
-  toggleName(){
-    this.displayName = !this.displayName;
+ this.sservice.getStudentsData().subscribe(res=>{
+
+ })
   }
 
 
-  //NO NEED OF FUNCTION KEYWORD
-  add(){ 
-    this.total = this.total+1;
+  displayAnswer(ans) {
+    this.answerfromOne = ans;
   }
- 
-  sub(){
-    this.total = this.total-1;
 
 
-
-
-
-
-    let obj = "{'a':1,'b':2}"
+  ngDoCheck() {
+    if (this.answerfromOne > 10) {
+      alert('Answer is above 10')
+    }
   }
-  
 
 
 
+   animateDiv(element){
 
-  
+    element.style.color ='red';
+   
+     }
+
 }
- 

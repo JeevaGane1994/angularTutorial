@@ -12,6 +12,10 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule} from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TestComponent } from './demo/test/test.component';
+import { OneComponent } from './demo/one/one.component';
+import { HighlightDirective } from './highlight.directive';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,10 +23,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LoginComponent,
     HomeComponent,
     SignUpComponent,
-    DemoComponent
+    DemoComponent,
+    TestComponent,
+    OneComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
@@ -46,7 +54,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
    ]),
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

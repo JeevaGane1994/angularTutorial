@@ -1,23 +1,47 @@
-<!-- <button (click)='add()'>Add</button>
-<button (click)='sub()'>Sub</button>
-
  
-<span>Answer {{total}} </span> -->
+<input [(ngModel)]='value' [ngClass]="{'borderRed': value > 10}" >
 
 
-<!--ngFor-->
+
+<span *ngIf='value>10' class='bg-red'> Value is greater than 10</span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- 
-<ul>
-    <li *ngFor='let element of names'>{{element}}</li>
-</ul> -->
 
 
 
 
 
-<!--ngIf-->
-<!-- 
-<h1 *ngIf='displayName'>name: Student Name </h1>
-<button *ngIf='!displayName' (click)='toggleName()'> Show </button>
-<button *ngIf='displayName' (click)='togglename()'> Hide </button> -->
-{{ employeeName | slice:2:4}}<br>
+
+
+
+  <app-one [value]='value' [mul]='multplier'   (answer)='displayAnswer($event)'></app-one>  
+ 
+
+<span> The answer is {{answerfromOne}} </span>
+
+
+<p appHighlight>5</p>
+
+
+<span appHighlight> Jeeva </span>
+
+
+<div (click)="animateDiv(red)" #red>CLICK ME</div> -->
