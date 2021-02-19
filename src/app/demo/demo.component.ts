@@ -11,7 +11,11 @@ export class DemoComponent implements OnInit, DoCheck {
   value = 1;
   multplier = 1;
   answerfromOne = 0
-
+  data:any = [
+    //  {name: 'Jeeva', std:'1', blood:'b+'},
+    // {name: 'Akil', std:'2', blood:'A+'},
+    // {name: 'Mahesh', std:'3', blood:'O+'}
+  ];
   
 
   constructor(private sservice:StudentsService) { }
@@ -19,7 +23,7 @@ export class DemoComponent implements OnInit, DoCheck {
   ngOnInit() {
 
  this.sservice.getStudentsData().subscribe(res=>{
-
+  this.data = res;
  })
   }
 

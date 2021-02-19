@@ -11,7 +11,15 @@ export class StudentsService {
 
 
 getStudentsData(){
-  const apidata = this.http.get('http://locathost:8000/getStudentData') 
+
+  const apidata = this.http.get('http://locathost:8000/getStudentData')
+
+  // const data = [
+  //   {name: 'Jeeva', std:'1', blood:'b+'},
+  //   {name: 'Akil', std:'2', blood:'A+'},
+  //   {name: 'Mahesh', std:'3', blood:'O+'}
+
+  // ]
   return  apidata;
 }
 
