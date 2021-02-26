@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CommonService } from '../common.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -8,14 +9,17 @@ import { Router } from '@angular/router';
 })
 export class SignUpComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  constructor(private router:Router,private dataservice:CommonService) { }
 
   ngOnInit(): void {
   }
 
 
   displayData(data) {
-    this.router.navigate(['/login'])
+    this.dataservice.savedata(data).subscribe(res=>{
+
+    })
+            // this.router.navigate(['/login'])
  }
 
 }
