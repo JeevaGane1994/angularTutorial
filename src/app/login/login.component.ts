@@ -23,6 +23,9 @@ export class LoginComponent implements OnInit,OnDestroy{
       pwd: new FormControl("")
     });
 
+    this.cservice.getDay(2022,6,25).subscribe(res=>{
+console.log(res)
+    })
   }
 
   onLogin() {

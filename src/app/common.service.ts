@@ -21,6 +21,17 @@ savedata(data){
     return  apidata;
 }
 
+getDay(year, month, date){
+  const apidata = this.http.get(`http://localhost:8080/getDay/?year=${year}&month=${month}&date=${date}`);    //get, post, put, deletee 
+  return  apidata;
+}
+
+
+saveFarmerData(data){
+
+ return this.http.post('http://localhost:8080/farmerData',data)
+}
+
   
 }
   
@@ -30,3 +41,5 @@ savedata(data){
 
 //get- no input but receive ouput
 //post input,output
+
+ 

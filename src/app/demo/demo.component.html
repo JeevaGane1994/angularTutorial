@@ -1,52 +1,4 @@
- 
-<input [(ngModel)]='value' [ngClass]="{'borderRed': value > 10}" >
-
-
-
-<span *ngIf='value>10' class='bg-red'> Value is greater than 10</span>
-
-
-
-
-<table>
-<tr>
-    <th>Name</th>
-    <th>Age</th> 
-</tr>
-
-<tr *ngFor='let item of details'>
-
-    <td>{{item.name}}</td>
-    <td>{{item.age}}</td> 
-
-    </tr>
-
-
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 
-
-
-
-
-
-
-
-
-  <app-one [value]='value' [mul]='multplier'   (answer)='displayAnswer($event)'></app-one>  
+<!-- <app-one [value]='value' [mul]='multplier'   (answer)='displayAnswer($event)'></app-one>  
  
 
 <span> The answer is {{answerfromOne}} </span>
@@ -58,4 +10,40 @@
 <span appHighlight> Jeeva </span>
 
 
-<div (click)="animateDiv(red)" #red>CLICK ME</div> -->
+<div (click)="animateDiv(red)" #red>CLICK ME</div>  -->
+
+
+
+
+
+
+
+
+
+
+
+<form [formGroup]="farmerDetails">
+
+  <div>
+    Farmer Name
+    <input type='text' formControlName="FarmerName">
+  </div>
+
+  <div>
+    Crop Name
+    <input type='text' formControlName="CropName">
+  </div>
+
+  <div>
+    Min Selling Price
+    <input type='text' formControlName="min">
+  </div>
+
+  <div>
+    Max Selling Price
+    <input type='text' formControlName="Max">
+  </div>
+</form>
+
+
+<button (click)='onSave()'>SAVE</button>
