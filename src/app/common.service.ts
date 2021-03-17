@@ -32,7 +32,11 @@ saveFarmerData(data){
  return this.http.post('http://localhost:8080/farmerData',data)
 }
 
-  
+returnFarmerData(data){
+
+  return this.http.post('http://localhost:8080/returnFarmerData',data)
+ }
+ 
 }
   
 

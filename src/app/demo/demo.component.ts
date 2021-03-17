@@ -14,7 +14,8 @@ export class DemoComponent implements OnInit {
   value = 1;
   multplier = 1;
   answerfromOne = 0
-  details: any = []
+  details: any = [];
+  farmerName;
 
 
 
@@ -50,7 +51,11 @@ export class DemoComponent implements OnInit {
     })
   }
 
-
+seeDetails(){
+  this.common.returnFarmerData(this.farmerName). subscribe(res=>{
+    
+  })
+}
 
 
 }
